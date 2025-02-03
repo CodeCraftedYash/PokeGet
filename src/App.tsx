@@ -23,9 +23,9 @@ const AppContent: React.FC = () => {
   const { display, setDisplay } = useDisplayContext();
 
   return (
-    <div className="bg-black w-full min-h-screen flex flex-col justify-start items-center p-2 border-b-2 pt-4">
+    <div className="bg-black w-full min-h-screen flex flex-col justify-start items-center p-2 border-b-2 pt-4 relative">
       <div className="flex flex-col items-center justify-center gap-2 ">
-        <h1 className="text-white text-3xl font-bold border-b-2 p-2">
+        <h1 className="text-white text-3xl font-bold border-b-2 p-2 border-b-blue-400">
           Get Your Pokemon
         </h1>
         <BirthdayFormComponent />
@@ -33,7 +33,7 @@ const AppContent: React.FC = () => {
           <PokemonDisplay />
         </div>
         <button
-          className="text-white bg-blue-500 p-2 text-xl rounded-2xl border-2"
+          className="text-white bg-blue-500 p-1 text-sm rounded-xl border-2 absolute bottom-64 "
           onClick={() => {
             setDisplay(!display); // This toggles the display state
           }}
