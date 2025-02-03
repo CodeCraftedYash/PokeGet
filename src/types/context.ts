@@ -1,3 +1,4 @@
+import { Dispatch, SetStateAction } from 'react';
 import { PokemonState } from './pokemon';
 
 export interface NumberGeneratorContextType {
@@ -8,4 +9,9 @@ export interface NumberGeneratorContextType {
 export interface PokemonContextType extends PokemonState {
   fetchPokemon: (number: number) => Promise<void>;
   clearPokemon: () => void;
+}
+
+export interface DisplayContextType {
+  display:boolean;
+  setDisplay:Dispatch<SetStateAction<boolean>>;
 }

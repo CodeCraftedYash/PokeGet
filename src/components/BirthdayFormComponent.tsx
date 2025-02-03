@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { useNumberGenerator } from '../context/NumberGeneratorContext'
 import { usePokemon } from '../context/PokemonContext';
+import { useDisplayContext } from '../context/DisplayContext';
 
 function BirthdayFormComponent() {
+  const {display,setDisplay} = useDisplayContext();
   const [birthdate, setBirthdate] = useState("");
   const { generateNumber } = useNumberGenerator();
   const { fetchPokemon } = usePokemon();
@@ -68,12 +70,14 @@ function BirthdayFormComponent() {
         const number= generateNumber(birthdate);
         
         fetchPokemon(number);
+        setDisplay(!display);
   
   }
   return (
-    <form onSubmit={handleSubmit}>
-      <label htmlFor="dateInput" className="block font-bold mb-2">
-        Enter Birthdate (DD/MM/YYYY)
+    <>
+     {!display && <form onSubmit={handleSubmit} className=' w-80 flex flex-col justify-center items-center '>
+      <label htmlFor="dateInput" className="block w-[80%] font-bold my-2 text-xl text-white text-center">
+        Enter Your Birthdate <br /> (DD/MM/YYYY)
       </label>
       <input
         type="text"
@@ -83,11 +87,12 @@ function BirthdayFormComponent() {
         onBlur={handleBlur}
         maxLength={10} // This accommodates the two slashes
         placeholder="DD/MM/YYYY"
-        className="border p-2 rounded"
+        className="border p-2 rounded border-white text-white bg-slate-800 placeholder:text-white/80 "
         required
       />
-      <button type="submit">Submit</button>
-    </form>
+      <button type="submit" className='text-white text-xl bg-blue-500 p-2 rounded-2xl not-[]: sm:hover:scale-110 mt-6 border-2 transition-transform duration-200'>Submit</button>
+    </form>}
+    </>
   );
 }
 
