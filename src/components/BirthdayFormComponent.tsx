@@ -75,8 +75,8 @@ function BirthdayFormComponent() {
   }
   return (
     <>
-     {!display && <form onSubmit={handleSubmit} className=' w-80 flex flex-col justify-start items-center gap-4'>
-      <label htmlFor="dateInput" className="block w-[80%] font-bold my-2 text-md text-white text-center text-nowrap mt-4">
+     {!display && <form onSubmit={handleSubmit} className=' w-80 flex flex-col justify-start items-center gap-4 '>
+      <label htmlFor="dateInput" className="block w-[80%] font-bold my-2 text-md text-white text-center text-nowrap mt-4 sm:text-xl">
         Enter Your Birthdate <span className='text-sm text-[rgba(255,255,255,.7)]'>(DD/MM/YYYY)</span> 
       </label>
       <input
@@ -87,10 +87,10 @@ function BirthdayFormComponent() {
         onBlur={handleBlur}
         maxLength={10} // This accommodates the two slashes
         placeholder="DD/MM/YYYY"
-        className="border p-2 rounded border-white text-white bg-slate-800 placeholder:text-white/80 mt-2"
+        className="border p-2 rounded border-white text-white bg-slate-800 placeholder:text-white/80 mt-2 sm:mt-12 w-[80%]"
         required
       />
-      <button type="submit" className='text-white text-md bg-blue-500 p-1 rounded-xl not-[]: sm:hover:scale-110 mt-6 border-2 transition-transform duration-200'>Submit</button>
+      <button type="submit" className='text-white text-md bg-blue-500 p-1 rounded-xl not-[]: sm:hover:scale-110 mt-6 border-2 transition-transform duration-200 sm:hover:cursor-pointer'>Submit</button>
     </form>}
     </>
   );

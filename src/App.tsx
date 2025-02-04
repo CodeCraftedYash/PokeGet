@@ -23,23 +23,23 @@ const AppContent: React.FC = () => {
   const { display, setDisplay } = useDisplayContext();
 
   return (
-    <div className="bg-black w-full min-h-screen flex flex-col justify-start items-center p-2 border-b-2 pt-4 relative">
+    <div className="bg-black w-full min-h-screen flex flex-col justify-start items-center p-2 border-b-2 pt-4 relative ">
       <div className="flex flex-col items-center justify-center gap-2 ">
-        <h1 className="text-white text-3xl font-bold border-b-2 p-2 border-b-blue-400 ">
+        <h1 className="text-white text-3xl font-bold border-b-2 p-2 border-b-blue-400 mb-2">
           Get Your Pokemon
         </h1>
         <BirthdayFormComponent />
         <div className="mt-8">
           <PokemonDisplay />
         </div>
-        <button
-          className="text-white bg-blue-500 p-1 text-sm rounded-xl border-2 absolute bottom-40 "
+        {display &&<button
+          className="text-white bg-blue-500 p-1 text-sm rounded-xl border-2 absolute bottom-64  sm:text-lg sm:hover:scale-110 transition-transform duration-200 sm:hover:cursor-pointer"
           onClick={() => {
-            setDisplay(!display); // This toggles the display state
+            setDisplay(!display); 
           }}
         >
           Retry
-        </button>
+        </button>}
       </div>
       <footer className="w-full bg-gray-900 text-white text-center py-4 absolute bottom-0">
       <p className="text-sm">© {new Date().getFullYear()} Yash Kr. Mishra. All rights reserved.</p>
