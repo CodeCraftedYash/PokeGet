@@ -20,13 +20,12 @@ function App() {
 }
 
 const AppContent: React.FC = () => {
-  // Now, use the display context inside the provider
   const { display, setDisplay } = useDisplayContext();
   return (
     <div className="bg-black w-full min-h-screen flex flex-col justify-start items-center p-2 border-b-2 pt-4 relative ">
       <div className="flex flex-col items-center justify-center gap-2 ">
-        <div className='flex flex-row'>
-      <img src={image} alt='pikachu' className='w-16 h-auto absolute left-4' />
+        <div className='flex flex-row '>
+      <img src={image} alt='pikachu' className='w-16 h-auto absolute left-4 sm:relative' />
         <h1 className="text-white text-2xl font-bold border-b-2 p-2 border-b-blue-400 mb-2">
       
          Get Your Pokemon
@@ -36,11 +35,11 @@ const AppContent: React.FC = () => {
 
         </div>
         <BirthdayFormComponent />
-        <div className="mt-8">
+        <div className="mt-8 sm:mt-18">
           <PokemonDisplay />
         </div>
         {display &&<button
-          className="text-white bg-blue-500 p-1 text-sm rounded-xl border-2 absolute bottom-40  sm:text-lg sm:hover:scale-110 transition-transform duration-200 sm:hover:cursor-pointer "
+          className="text-white bg-blue-500 p-1 text-sm rounded-xl border-2 absolute bottom-40  sm:text-lg sm:hover:scale-110 transition-transform duration-200 sm:hover:cursor-pointer sm:bottom-35"
           onClick={() => {
             setDisplay(!display); 
           }}
