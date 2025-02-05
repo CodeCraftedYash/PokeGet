@@ -1,6 +1,3 @@
-data flow
-
-Birthday input → Number generation → Pokemon fetching → Display
 # Birthday Pokémon Generator 🎂⚡  
 [![Vercel Deployed](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://poke-get-black.vercel.app)  
 
@@ -34,7 +31,7 @@ A React + TypeScript app that fetches Pokémon data from [PokeAPI](https://pokea
 
 1. Clone the repository:  
    ```bash  
-   git clone https://github.com/your-username/birthday-pokemon-generator.git  
+   git clone https://github.com/CodeCraftedYash/PokeGet  
 
 2. Install dependencies:
    ```bash
