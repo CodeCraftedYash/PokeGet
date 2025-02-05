@@ -2,7 +2,7 @@ data flow
 
 Birthday input → Number generation → Pokemon fetching → Display
 # Birthday Pokémon Generator 🎂⚡  
-[![Vercel Deployed](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://your-vercel-link.vercel.app)  
+[![Vercel Deployed](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=flat&logo=vercel)](https://poke-get-black.vercel.app)  
 
 A React + TypeScript app that fetches Pokémon data from [PokeAPI](https://pokeapi.co/) based on birthday inputs. Built to master **data fetching**, **multi-context state management**, and **TypeScript generics**.
 
