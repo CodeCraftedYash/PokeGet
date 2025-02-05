@@ -79,8 +79,8 @@ function BirthdayFormComponent() {
       <label htmlFor="dateInput" className="block w-[80%] font-bold my-2 text-md text-white text-center text-nowrap mt-4 sm:text-xl">
         Enter Your Birthdate <span className='text-sm text-[rgba(255,255,255,.7)]'>(DD/MM/YYYY)</span> 
       </label>
-      <div className='w-[80%] flex justify-between items-center flex-row-reverse'>
-      <img src="https://cdn-icons-png.flaticon.com/512/5562/5562272.png" alt="birthday" className='w-12'/>
+      <div className='w-[80%] flex h-auto justify-between items-end flex-row-reverse '>
+      <img src="https://cdn-icons-png.flaticon.com/512/5562/5562272.png" alt="birthday" className='w-12 m-0 p-0'/>
       <input
         type="text"
         id="dateInput"
